@@ -30,9 +30,11 @@ description: |
 
 ## 开工前（两个动作共用）
 
-1. 读用户文件夹的说明书（`AGENTS.md` / `CLAUDE.md`）和「路径映射」。
+1. 先认文件夹：根目录有 `总入口暗号.md` 的是 YMOS，说明书换成根目录的 `YMSKILL_ADAPTER.md`（没有就用 `yms-setup` 建文件夹里内置的 YMOS 映射），下面各步的路径一律按映射换，按本节末尾「在 YMOS 文件夹里」办，不当成没初始化。其他文件夹读说明书（`AGENTS.md` / `CLAUDE.md`）和「路径映射」。
 2. 读 `07_主控/`（全局状态、调度表、任务说明）。不存在 → 说明还没启用，按对应动作的「第一次」步骤建。
 3. 读 `01_我的投资框架/Strategy_Profile.md`：主控围绕这里写的目标推进。
+
+**在 YMOS 文件夹里**（根目录有 `总入口暗号.md`）：定时任务交给 YMOS 的 `Agents/SCHEDULES.md` 和 `Agents/ORCHESTRATION.md`；主控心跳照常做，交接写到 `Agents/交接/`，回执写到 `Agents/回执/`（以根目录 `YMSKILL_ADAPTER.md` 为准；没有这个文件就按 `yms-setup` 建文件夹里的 YMOS 映射）。
 
 ## 这个模块的规矩
 

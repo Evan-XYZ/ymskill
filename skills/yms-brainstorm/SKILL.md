@@ -49,7 +49,7 @@ Insight           事实 / 解释 / 假设 / 情绪拆开；假设写清怎么�
 
 ## 开工前（六个动作共用）
 
-1. 读用户文件夹的说明书（`AGENTS.md` / `CLAUDE.md`）和「路径映射」，找到 BrainStorm 的位置（默认 `06_BrainStorm/`）。
+1. 先认文件夹：根目录有 `总入口暗号.md` 的是 YMOS，说明书换成根目录的 `YMSKILL_ADAPTER.md`（没有就用 `yms-setup` 建文件夹里内置的 YMOS 映射），下面各步的路径一律按映射换，按本节末尾「在 YMOS 文件夹里」办，不当成没初始化。其他文件夹读说明书（`AGENTS.md` / `CLAUDE.md`）和「路径映射」，找到 BrainStorm 的位置（默认 `06_BrainStorm/`）。映射里写了子目录的（比如 YMOS 的原始想法在 `BrainStorm/每日头脑风暴/Raw_Thoughts/`），下面各个动作里的路径一律换成映射里的。
 2. 第一次用、`MEMORY.md` 和 `STATUS.md` 还不存在：按 `templates/` 建出来，再开始。
 3. 没有投资文件夹：问我是建完整的投资文件夹（`yms-setup`），还是只建一个 BrainStorm 先用起来。只建 BrainStorm 的，在我指定的位置建 `BrainStorm/`，结构和下面一样。
 
@@ -65,6 +65,8 @@ Insight           事实 / 解释 / 假设 / 情绪拆开；假设写清怎么�
 ├── 状态快照/YYYY-MM-DD.md            状态机改版前的留底
 └── 历史资料/原始资料/  资料索引.md  梳理/
 ```
+
+**在 YMOS 文件夹里**（根目录有 `总入口暗号.md`）：记下来、整理、沉淀交给 YMOS 的「开始今天的头脑风暴」「整理一下今天说的」，历史资料入职交给「整理我的历史投资资料」；动作记录和每周回看照常做，写到 `BrainStorm/动作记录/`、`BrainStorm/回看/`，状态机改版前的快照放 `BrainStorm/状态机/快照/`（以根目录 `YMSKILL_ADAPTER.md` 为准；没有这个文件就按 `yms-setup` 建文件夹里的 YMOS 映射）。
 
 ## 这个模块的规矩
 

@@ -5,7 +5,10 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-A6533C.svg?style=flat-square)](VERSION)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-2F7857.svg?style=flat-square)](LICENSE)
 
-ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 个模块、28 个投资流程动作，装进你自己的 Agent 就能用。支持 Claude Code、Codex、豆包电脑版、WorkBuddy 和其他兼容 Skills 的 Agent。作者：勇麦（十一年 A 股 + 美股实盘，一年多重度用 AI 做投研、决策和复盘）。
+ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 个模块、28 个投资流程动作，装进你自己的 Agent 就能用。作者：勇麦（十一年 A 股 + 美股实盘，一年多重度用 AI 做投研、决策和复盘）。
+
+- **装上就能用**：Claude Code（推荐）· Codex · Cursor · OpenClaw · Hermes · Gemini CLI · Trae · CodeBuddy，以及其他支持 Agent Skills 的 Agent
+- **复制进对话也能用**：ChatGPT · Claude · Gemini · Grok · 豆包 · DeepSeek · Kimi
 
 > 不荐股，不预测，不接交易。判断永远是你的；这些 Skill 管的是流程。
 
@@ -14,7 +17,7 @@ ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 �
 **你是人？** 📋 把这句复制给你的 AI：
 
 ```text
-帮我从 https://github.com/Evan-XYZ/ymskill 安装 ymskill，读一遍 AGENTS.md，然后在我选的文件夹里初始化我的投资文件夹，再用 /yms 帮我做一次起点诊断，告诉我先从哪个动作开始。
+帮我从 https://github.com/Evan-XYZ/ymskill 安装 ymskill：先读仓库里的 AGENTS.md，按它的步骤装好；装完问我想先试一下，还是先建投资文件夹；最后用 /yms 帮我做一次起点诊断，告诉我先从哪个动作开始。
 ```
 
 想自己在终端装，跳到 **[安装](#安装)**。
@@ -22,6 +25,7 @@ ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 �
 ## 目录
 
 - [ymskill 是什么](#ymskill-是什么)
+- [三件东西：方法、动作、打样](#三件东西方法动作打样)
 - [先想清楚：你赚的是哪一种钱](#先想清楚你赚的是哪一种钱)
 - [装好之后能做什么](#装好之后能做什么)
 - [开始使用](#开始使用)
@@ -31,7 +35,6 @@ ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 �
 - [从哪开始](#从哪开始)
 - [仓库资料](#仓库资料)
 - [更新](#更新)
-- [关于 YMOS](#关于-ymos我自己那一版)
 - [许可证](#许可证)
 
 ---
@@ -63,6 +66,25 @@ ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 �
 - **不是我的策略**。我的尺子、仓位、偏好不在这里面。Skill 里只有结构，参数从你的文件夹里读。
 
 文件夹的完整规范见 **[docs/资产文件夹规范.md](docs/资产文件夹规范.md)**。
+
+---
+
+## 三件东西：方法、动作、打样
+
+ymskill 之外，还有两样东西。三样各管一段：
+
+| | 是什么 | 适合谁 |
+|:---|:---|:---|
+| **[《AI 投资指南》](https://yongmai.xyz/ai-invest-guide/)** | **方法**。8 篇讲清楚每一步为什么这么做、我踩过什么坑。它是源头，照着它，你可以从零搭出自己和 AI 协作做投资的那一套 | 想弄懂原理、想自己搭 |
+| **ymskill**（这个仓库） | **动作**。把指南里反复要做的事抽成一个个能直接调用的动作，按模块分好，可以理解成提示词的升级版。你的判断写在你自己的文件夹里，它照着干活 | 已经有自己的笔记或流程，想让 AI 按规矩干活 |
+| **[YMOS](https://github.com/Evan-XYZ/YMOS)** | **打样**。指南这套思路的一次完整实现：按我自己的投资习惯抽象出来的投资文件夹，投研、策略、操盘三层，能装下你自己的策略和偏好，加阅读器和桌面客户端。下载就能用，可以照着用，也可以魔改 | 想直接拿一套搭好的，再按自己的改 |
+
+一句话：**指南给方法，ymskill 给动作，YMOS 是照着方法搭好的一份样板。**
+
+三样可以单独用，也能叠着用。**已经在用 YMOS 的，装上 ymskill 不用搬家**：它认得 YMOS 的目录（根目录有 `总入口暗号.md`），读 YMOS 带的 [`YMSKILL_ADAPTER.md`](https://github.com/Evan-XYZ/YMOS/blob/main/YMSKILL_ADAPTER.md) 分工；老版本 YMOS 没有这份文件，就用 [建文件夹](skills/yms-setup/references/vault-init.md) 里内置的同一份映射。
+
+- YMOS 已经有的流程（市场洞察、我想买、头脑风暴、定时任务……）照旧用 YMOS 的；
+- ymskill 补 YMOS 没有的动作：开原件核实、事件分级、跨市场传导、两把尺子、持有期复盘、回看台账、动作记录、主控心跳，产物写回 YMOS 的目录。
 
 ---
 
@@ -235,15 +257,18 @@ ymskill 管的是围绕这个差的流程：每天替你盯着市场、只告诉
 
 选和你的 Agent 相符的一种。下面的命令在终端里运行，不要当聊天内容发给 Agent。
 
-### 用 Skills CLI 装到支持的 Agent
+### 用 Skills CLI 装到你电脑上已有的 Agent
 
-终端要能运行 `npx`：
+终端要能运行 `npx`（装了 Node.js 就有）：
 
 ```bash
-npx -y skills add Evan-XYZ/ymskill -g --all
+npx -y skills add Evan-XYZ/ymskill -g -y --skill '*'
 ```
 
-`-g` 表示全局安装，`--all` 表示装到 Skills CLI 识别到的所有 Agent。只想装到某一个，去掉 `--all`，按提示选。
+- `-g` 装到用户级目录，所有文件夹里都能用；`--skill '*'` 装全部 8 个模块；`-y` 不再逐项确认。
+- 它会自动找到你电脑上已经装了的 Agent（Claude Code、Codex、Cursor、OpenClaw、Hermes、Gemini CLI 等），只装到这些里面。Codex、Cursor、Gemini CLI 这类读通用目录 `~/.agents/skills/` 的共用一份，Claude Code 会连到同一份。
+- 只装到某一个 Agent，把 `-y` 去掉按提示选，或者写明：`--agent claude-code`。
+- **不要加 `--all`**：它会给 Skills CLI 认识的几十个 Agent 都在你的用户目录下建一个文件夹，不管你装没装那个 Agent。
 
 ### 用 Claude Code 插件市场
 
@@ -266,7 +291,7 @@ cp -R ymskill/skills/yms* ~/.claude/skills/
 
 ### 只能对话的工具
 
-豆包电脑版、WorkBuddy 这类工具没有 Skills 机制也能用：打开要用的那一份动作文件（`skills/<模块>/references/<动作>.md`），把正文整个复制进对话，再把它要读的文件（比如你的策略档案）一起贴进去。没有定时任务，就每天手动跑同一条，一样能积累。
+ChatGPT、Claude、Gemini、豆包、DeepSeek、Kimi 这类只能对话的工具，没有 Skills 机制也能用：打开要用的那一份动作文件（`skills/<模块>/references/<动作>.md`），把正文整个复制进对话，再把它要读的文件（比如你的策略档案）一起贴进去。没有定时任务，就每天手动跑同一条，一样能积累。
 
 ### 装了什么
 
@@ -318,7 +343,7 @@ Agent 平时只看到每个模块的名字和一两句描述，你用到哪个�
 | [资产文件夹规范](docs/资产文件夹规范.md) | 你的投资文件夹长什么样、谁能写什么、模板 |
 | [安装与使用](docs/安装与使用.md) | 各种工具怎么装、第一次怎么用、常见问题 |
 | [Skill 编写规范](docs/Skill编写规范.md) | 想改我的动作，或者把你自己的思考动作写成新动作 |
-| 《AI 投资指南》8 篇 | 每个动作背后的为什么和我踩过的坑：`<博客地址>` |
+| [《AI 投资指南》8 篇](https://yongmai.xyz/ai-invest-guide/) | 每个动作背后的为什么和我踩过的坑 |
 
 每个动作文件开头都写着它来自 8 篇里的哪一篇、哪一节。
 
@@ -335,17 +360,6 @@ Agent 平时只看到每个模块的名字和一两句描述，你用到哪个�
 或者用你当初装的方式再装一次：Skills CLI 再跑一次安装命令；Claude Code 插件用 `claude plugin update ymskill@ymskill`；手动复制的，在仓库目录里 `git pull`，再复制一次。
 
 更新只换 Skills，**你的投资文件夹一个字不动**。你自己改过某个动作文件的，更新前先备份那一份。
-
----
-
-## 关于 YMOS：我自己那一版
-
-YMOS 是我开源的个人投资操作系统：投研层、策略层、操盘层，加一个本地阅读器。ymskill 里的每一个动作，都在 YMOS 里跑过。
-
-区别在于：YMOS 是**我的**样本，带着我的两个目标、能力圈和局限；ymskill 是从里面抽出来的**公共动作**，配一个由你自己填的文件夹。用它搭出来的，应该是**你自己的那一版**，不是 YMOS 的复制品。
-
-- YMOS 开源仓库：[github.com/Evan-XYZ/YMOS](https://github.com/Evan-XYZ/YMOS)
-- YMOS 文档：[yongmai.xyz/ymos-docs](https://yongmai.xyz/ymos-docs/)
 
 ---
 

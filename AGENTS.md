@@ -18,7 +18,7 @@
 
 用户的环境能跑终端命令时，按他的 Agent 选一种：
 
-- 支持 Skills CLI：`npx -y skills add Evan-XYZ/ymskill -g --all`
+- 支持 Skills CLI：`npx -y skills add Evan-XYZ/ymskill -g -y --skill '*'`（只装到用户电脑上已有的 Agent；不要加 `--all`，它会给几十个用户没装的 Agent 都建目录）
 - Claude Code 插件：`claude plugin marketplace add Evan-XYZ/ymskill`，再 `claude plugin install ymskill@ymskill`（命令会带 `ymskill:` 命名空间）
 - 手动：按下面的步骤复制
 
@@ -44,7 +44,9 @@
 
 ## 四、每次用任何模块之前
 
-1. 读用户文件夹根目录的说明书（`AGENTS.md` / `CLAUDE.md`），读「路径映射」。
+1. 读用户文件夹根目录的说明书（`AGENTS.md` / `CLAUDE.md`），读「路径映射」。路径按这个顺序找：说明书里用户自己写的映射 → 根目录的 `YMSKILL_ADAPTER.md`（YMOS 带的）→ 内置的标准路径。
+   - **用户文件夹里已经有自己的流程**（暗号表、SOP）和某个动作重叠，以他的为准，ymskill 只补他没有的；他点名 `/yms-*` 才用 ymskill 的版本，产物仍写回他的目录。
+   - **文件夹是 YMOS**（根目录有 `总入口暗号.md`）：按 `YMSKILL_ADAPTER.md` 分工；没有这个文件，按 `yms-setup` 建文件夹里内置的 YMOS 映射。
 2. 读模块 `SKILL.md`，按用户的话找到对应的那一份动作文件，只读那一份。拿不准该用哪个模块，按 `skills/yms/SKILL.md` 的全目录找。
 3. 按动作文件的「前置检查」逐项找：
    - 文件不存在 → 停下，告诉他先跑哪个动作；
