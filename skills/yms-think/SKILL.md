@@ -1,10 +1,10 @@
 ---
 name: yms-think
 description: |
-  想：把尺子写下来，每一把都量一遍。同一件事用你档案里的每一把尺子分别量；核心资产七问；反向 DCF 倒推市值隐含的增长；对比两个季度的管理层口径；把每天的想法和动作存档、拆开。
-  五个动作：两把尺子 dual-ruler、核心资产七问 core-asset-7q、反向 DCF reverse-dcf、财报叙事 earnings-narrative、想法记录 brainstorm-log。
-  触发：/yms-think、「用两把尺子量一下」「这件事算哪一类机会」「审一下这家公司」「核心资产七问」「反向 DCF」「现在的市值隐含了多少增长」「估值贵不贵」「对比两个季度的电话会」「管理层口径变了吗」「开始今天的头脑风暴」「整理今天的内容」「记一下我今天做了什么」
-  Measure one thing with every ruler you wrote down; core-asset audit; reverse DCF; earnings-call narrative diff; idea log. Trigger: /yms-think, "measure this with both rulers", "reverse DCF", "compare the last two earnings calls", "start today's brainstorm".
+  想：把尺子写下来，每一把都量一遍。同一件事用你档案里的每一把尺子分别量；核心资产七问；反向 DCF 倒推市值隐含的增长；对比两个季度的管理层口径。
+  四个动作：两把尺子 dual-ruler、核心资产七问 core-asset-7q、反向 DCF reverse-dcf、财报叙事 earnings-narrative。
+  触发：/yms-think、「用两把尺子量一下」「这件事算哪一类机会」「审一下这家公司」「核心资产七问」「反向 DCF」「现在的市值隐含了多少增长」「估值贵不贵」「对比两个季度的电话会」「管理层口径变了吗」
+  Measure one thing with every ruler you wrote down; core-asset audit; reverse DCF; earnings-call narrative diff. Trigger: /yms-think, "measure this with both rulers", "reverse DCF", "compare the last two earnings calls".
 ---
 
 # 想 · yms-think
@@ -20,9 +20,8 @@ description: |
 | 「审一下这家公司」「核心资产七问」 | 七问逐条审，答不上来标存疑，输出判定卡和看空反证清单 | `references/core-asset-7q.md` |
 | 「反向 DCF」「市值隐含了多少增长」 | 不问值多少钱，只倒推当前市值隐含的增长要求，再看现不现实 | `references/reverse-dcf.md`（计算用 `scripts/reverse_dcf.py`） |
 | 「对比两个季度的电话会」「口径变了吗」 | 承诺兑现、叙事转移、问答回避、下季锚点 | `references/earnings-narrative.md` |
-| 「开始今天的头脑风暴」「整理今天的内容」「记一下我今天做了什么」 | 原话存档；拆成事实 / 解释 / 假设 / 情绪；另记今天真的做了什么 | `references/brainstorm-log.md` |
 
-只读对应的那一份。
+只读对应的那一份。每天的想法、感悟、复盘心得，交给 `yms-brainstorm`。
 
 ## 先分目标，再用模具
 
@@ -30,11 +29,13 @@ description: |
 
 所以：用户要审一件事、一家公司，却没说它属于哪一类机会时，先跑 `dual-ruler`，再决定用哪个模具。
 
-## 开工前（五个动作共用）
+## 开工前（四个动作共用）
 
 1. 读用户文件夹的说明书（`AGENTS.md` / `CLAUDE.md`）和「路径映射」。
 2. 读 `01_我的投资框架/Strategy_Profile.md`：有几个目标、每个目标的尺子和认错条件。`dual-ruler` 缺了它就停；其他动作缺了可以跑，输出里写明「无档案对照」。
 3. 研究对象有档案的，先读 `02_研究档案/<名称>.md`，接着上次往下写。
+
+**没有投资文件夹时**：反向 DCF 照跑，结果先给在对话里；需要存文件的（比如整理好的交割单），放进当前目录的 `ymskill_试用/`。结束时问要不要建文件夹（`yms-setup`），把结果挪进去。其余动作先提示建文件夹。
 
 ## 这个模块的规矩
 

@@ -27,9 +27,10 @@
 **1. 倒推隐含增速**
 
 ```bash
-python3 scripts/reverse_dcf.py --market-cap <市值> --fcf <基准FCF> --rate 0.09 --terminal 0.025 --years 3,5
+python3 "<本 Skill 目录>/scripts/reverse_dcf.py" --market-cap <市值> --fcf <基准FCF> --rate 0.09 --terminal 0.025 --years 3,5
 # 用公司自由现金流（FCFF）时，加 --net-debt <净负债>，净现金写负数
 ```
+`<本 Skill 目录>` 是 `yms-think` 这个模块所在的文件夹（加载 Skill 时会告诉你），不是用户的投资文件夹。
 
 没有 Python 时的公式（两段式）：
 

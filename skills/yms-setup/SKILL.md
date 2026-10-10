@@ -1,7 +1,7 @@
 ---
 name: yms-setup
 description: |
-  搭底座：初始化你的投资文件夹，把你的目标、尺子和观测清单写下来。其余五个模块开工前都读这里写下的东西。
+  搭底座：初始化你的投资文件夹，把你的目标、尺子和观测清单写下来。其余六个模块开工前都读这里写下的东西。
   三个动作：建文件夹 vault-init、策略档案 strategy-profile、观测清单 watch-setup。
   触发：/yms-setup、「帮我建投资文件夹」「初始化投资知识库」「帮我梳理策略」「写策略档案」「我做的是哪类机会」「我该盯什么」「设置观测清单」「信源怎么分级」
   Set up your investing folder, strategy profile and watchlist. Trigger: /yms-setup, "set up my investing vault", "write my strategy profile", "what should I watch".
@@ -26,7 +26,7 @@ description: |
 
 ## 开工前（三个动作共用）
 
-1. 找说明书：用户投资文件夹根目录下的 `AGENTS.md` / `CLAUDE.md`，读里面的「路径映射」；没写映射的项按 `docs/资产文件夹规范.md` 的标准路径找。
+1. 找说明书：用户投资文件夹根目录下的 `AGENTS.md` / `CLAUDE.md`，读里面的「路径映射」；没写映射的项，按说明书里的目录表和各动作文件写的默认路径找。
 2. 找不到说明书：还没初始化，先跑 `vault-init`。
 3. 再按对应动作文件里的「前置检查」逐项找。
 

@@ -25,8 +25,9 @@
 
 **1. 配对**
 ```bash
-python3 scripts/pair_trades.py 05_复盘/数据/成交_标准化_YYYYMMDD.csv --out 05_复盘/数据/已清仓_YYYYMMDD.csv
+python3 "<本 Skill 目录>/scripts/pair_trades.py" 05_复盘/数据/成交_标准化_YYYYMMDD.csv --out 05_复盘/数据/已清仓_YYYYMMDD.csv
 ```
+`<本 Skill 目录>` 是 `yms-review` 这个模块所在的文件夹（加载 Skill 时会告诉你），脚本不在用户的投资文件夹里；命令在用户的投资文件夹里运行。
 - 默认口径 cycle：同一只标的从建仓到清仓为 0 算一笔，持有天数 = 最后卖出日 − 第一次买入日。想按先进先出逐批配对，用 `--mode lot`。先把口径告诉我，我确认再往下；
 - 脚本列出的「对不上、拿不准的记录」（比如导出区间之前买的、方向认不出的）原样给我看，不猜。
 
