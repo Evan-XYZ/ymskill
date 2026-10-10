@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 回看"
+  short_description: "持有期复盘、三红旗、单笔归因、回看台账、规则变更"
+  default_prompt: "用 $yms-review 把我的交割单按持有期分组复盘。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,21 @@
+{
+  "name": "ymskill",
+  "displayName": "ymskill",
+  "description": "勇麦的 AI 投资 Skills：总入口 yms + 6 个模块（搭底座、看、想、做、回看、自己跑），23 个投资流程动作。不荐股、不预测、不接交易。",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yongmai (Evan-XYZ)"
+  },
+  "homepage": "https://github.com/Evan-XYZ/ymskill",
+  "repository": "https://github.com/Evan-XYZ/ymskill",
+  "license": "CC-BY-NC-4.0",
+  "skills": [
+    "./skills/yms",
+    "./skills/yms-setup",
+    "./skills/yms-watch",
+    "./skills/yms-think",
+    "./skills/yms-gate",
+    "./skills/yms-review",
+    "./skills/yms-autopilot"
+  ]
+}

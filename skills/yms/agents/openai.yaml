@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 总入口"
+  short_description: "新手入门、起点诊断、按你的情况推荐该用哪个动作"
+  default_prompt: "用 $yms 帮我做一次起点诊断，告诉我先从哪个动作开始。"
+policy:
+  allow_implicit_invocation: true

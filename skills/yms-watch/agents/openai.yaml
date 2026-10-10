@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 看"
+  short_description: "只看变化：每日观测、事件分级、开原件核实、跨市场传导"
+  default_prompt: "用 $yms-watch 按我的观测清单写今天的每日观测，只写实质变化。"
+policy:
+  allow_implicit_invocation: true

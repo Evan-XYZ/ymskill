@@ -1,0 +1,27 @@
+{
+  "name": "ymskill",
+  "owner": {
+    "name": "Evan-XYZ"
+  },
+  "metadata": {
+    "description": "勇麦的 AI 投资 Skills：一个总入口 + 6 个模块，23 个投资流程动作，配一个由你自己填的本地文件夹。不荐股、不预测、不接交易。",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ymskill",
+      "description": "AI 投资流程 Skills：只看变化再去开原件、每一把尺子都量一遍、下注前过门禁、事后记账、让系统每天自己跑。所有动作先读你自己的投资文件夹，你没写的不替你编。",
+      "source": "./",
+      "strict": true,
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "investing",
+        "research",
+        "discipline",
+        "journal",
+        "chinese"
+      ]
+    }
+  ]
+}

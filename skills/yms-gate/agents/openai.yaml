@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 做"
+  short_description: "买入门禁、卖出对照、本地单文件操盘台；不接交易接口"
+  default_prompt: "用 $yms-gate 帮我过一遍买入门禁四问。"
+policy:
+  allow_implicit_invocation: true

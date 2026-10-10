@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 自己跑"
+  short_description: "定时任务说明、调度表、每天一份交接的主控心跳"
+  default_prompt: "用 $yms-autopilot 跑一次心跳，写今天的交接。"
+policy:
+  allow_implicit_invocation: true

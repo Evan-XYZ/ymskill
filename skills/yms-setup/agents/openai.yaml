@@ -1,0 +1,6 @@
+interface:
+  display_name: "ymskill · 搭底座"
+  short_description: "初始化投资文件夹，写下你的目标、尺子和观测清单"
+  default_prompt: "用 $yms-setup 帮我初始化投资文件夹，再帮我写第一版策略档案。"
+policy:
+  allow_implicit_invocation: true
