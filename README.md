@@ -81,7 +81,7 @@ ymskill 之外，还有两样东西。三样各管一段：
 
 一句话：**指南给方法，ymskill 给动作，YMOS 是照着方法搭好的一份样板。**
 
-三样可以单独用，也能叠着用。**已经在用 YMOS 的，装上 ymskill 不用搬家**：它认得 YMOS 的目录（根目录有 `总入口暗号.md`），读 YMOS 带的 [`YMSKILL_ADAPTER.md`](https://github.com/Evan-XYZ/YMOS/blob/main/YMSKILL_ADAPTER.md) 分工；老版本 YMOS 没有这份文件，就用 [建文件夹](skills/yms-setup/references/vault-init.md) 里内置的同一份映射。
+三样可以单独用，也能叠着用。**已经在用 YMOS 的，装上 ymskill 不用搬家**：它认得 YMOS 的目录（根目录有 `总入口暗号.md`），读 YMOS 带的 [`YMSKILL_ADAPTER.md`](https://github.com/Evan-XYZ/YMOS/blob/main/YMSKILL_ADAPTER.md) 分工；老版本 YMOS 没有这份文件，就用 [建文件夹](skills/yms-setup/references/vault-init.md) 里内置的同一份映射，并提醒你补上（桌面端做一次增量补全、拉最新的 YMOS，或者让它现在帮你补）。还没写策略 Profile、但在 `当前关注方向与投资偏好.md` 里写过目标和尺子的，它会直接读那里。
 
 - YMOS 已经有的流程（市场洞察、我想买、头脑风暴、定时任务……）照旧用 YMOS 的；
 - ymskill 补 YMOS 没有的动作：开原件核实、事件分级、跨市场传导、两把尺子、持有期复盘、回看台账、动作记录、主控心跳，产物写回 YMOS 的目录。
