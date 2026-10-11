@@ -2,7 +2,7 @@
 
 **把你的投资判断写进一个 AI 读得懂的文件夹，再让 Agent 按你的规矩帮你看、帮你拦、帮你记账。**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-A6533C.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-1.0.1-A6533C.svg?style=flat-square)](VERSION)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-2F7857.svg?style=flat-square)](LICENSE)
 
 ymskill 是《AI 投资指南》8 篇的可运行版本：一个总入口、7 个模块、28 个投资流程动作，装进你自己的 Agent 就能用。作者：勇麦（十一年 A 股 + 美股实盘，一年多重度用 AI 做投研、决策和复盘）。
